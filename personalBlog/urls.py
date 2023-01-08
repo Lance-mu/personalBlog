@@ -19,3 +19,12 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+
+from user.views import home
+from user.views import login
+
+urlpatterns += [
+    path('', home),
+    path('login/', login)
+]
