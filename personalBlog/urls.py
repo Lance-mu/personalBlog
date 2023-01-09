@@ -23,8 +23,10 @@ urlpatterns = [
 
 from user.views import home
 from user.views import login
+from user1.views import view_user1
 
 urlpatterns += [
     path('', home),
-    path('login/', login)
+    path('login/', login),
+    path('user1', view_user1)
 ]

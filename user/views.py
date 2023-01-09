@@ -7,7 +7,7 @@ from user.models import User
 
 
 def home(request):
-    return HttpResponse(request,'首页')
+    return HttpResponse(request, '这是首页的页面')
 
 
 def login(request):
