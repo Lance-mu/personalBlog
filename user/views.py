@@ -7,15 +7,23 @@ from user.models import User
 
 
 def home(request):
-    return HttpResponse(request, '这是首页的页面')
+    return HttpResponse('这是首页的页面')
 
 
 def login(request):
+    request.POST
     return render(request, "login.html")
 
 
+# 构建了一个视图样例--> 添加用户数据
 def create_user(request):
     user = User()
-    user.username = ''
-    return render(request,)
+    user.username = request.POST["username"]
+    user. password = request.POST["password"]
+    # user.create_time = '2022-01-12 23:51'
+    user.save()
+
+    return HttpResponse("创建用户成功")
+
+    # create_time
 
