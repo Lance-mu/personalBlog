@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <form action="index.html">
+        用户名：<input type="text" name="uname" id="">
+        <input type="submit" value="登录">
+    </form>
+    
+    <a href="#">跟随鼠标移动</a>
+
+    <script>
+        // document.addEventListener('click', function(e){
+            // // 1、client 鼠标在相对于浏览器窗口的X和Y坐标
+            // console.log(e.clientX);   // 相对于浏览器窗口的X坐标
+            // console.log(e.clientY);   // 相对于浏览器窗口的Y坐标
+
+            // console.log('------');
+            // // 2、page 鼠标在页面文档的X和Y坐标
+            // console.log(e.pageX);   // 对于文档页面的X坐标
+            // console.log(e.pageY);   // 对于文档页面的Y坐标
+
+            // console.log('------');
+            // // 2、page 相对于电脑屏幕的X和Y坐标
+            // console.log(e.screenX);   // 对于文档页面的X坐标
+            // console.log(e.screenY);   // 对于文档页面的Y坐标
+            // console.log('******');
+        // })
+
+
+        // 跟随鼠标的
+        // var pic = document.querySelector('a')
+        // document.addEventListener('mousemove', function(e){
+        //     let x = e.pageX;
+        //     let y = e.pageY;
+        //     console.log('x坐标是y'+ x,'x坐标是y'+y);
+        //     pic.style.left = x-20 + 'px';
+        //     pic.style.top = y-2 + 'px';
+        // })
+
+
+
+        // 键盘事件，函数前面需要加on
+        document.addEventListener('keyup', function(e){   
+                console.log('键盘按键弹起的时候触发 能识别功能键');
+                console.log(e.keyCode);  // keyup和keydown不区分大小写  a和A的ASCII码一样
+            })
+
+        document.addEventListener('keydown', function(){
+                console.log('键盘按键按下的时候触发');
+            })
+
+        document.addEventListener('keypress', function(e){
+            console.log('某个按键按下时触发，不识别功能键：比如ctrl shift 左右箭头等');
+            console.log(e.keyCode);  // 区分大小写  a和A的ASCII码不一样
+        })
+        // .foucs() 获得焦点
+
+
+    </script>
+</body>
+</html>

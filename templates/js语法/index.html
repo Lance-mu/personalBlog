@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+        <a href="5坐标鼠标事件登录.html">history的forward和back</a>
+    <script>
+        
+        div = document.querySelector('div')
+        console.log(location.search);  // 获取URL参数 
+        let params = location.search.substr(1);   // substr(start, 截取几个字符[默认到最后一个])
+        var arr = params.split('=');  // 等号分割成数组
+
+        div.innerHTML = arr;
+        console.log(arr);
+
+
+        // navigatot包含有关浏览器的信息，有很多属性，最常用的的是userAgent，该属性可以返回由客户机发送服务器的user-agent头部的值
+        // history 与浏览历史记录进行交互，该对象包含用户（在浏览器窗口中）
+    </script>
+    
+</body>
+</html>
